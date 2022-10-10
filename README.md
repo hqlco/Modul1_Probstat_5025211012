@@ -332,7 +332,8 @@ menggunakan fungsi bawaan `mean` dan `variance`.
 
 
 
-
+-------
+**NO ROYAL ROAD IN GEOMETRY**
 
 
 
