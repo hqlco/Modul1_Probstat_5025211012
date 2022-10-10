@@ -12,6 +12,7 @@ dgeom(x, p)
 # hasil : [1] 0.1024
 ``` 
 **Penjelasan**   
+
 Fungsi `dgeom` adalah fungsi yang menerima parameter n dan peluang, akan didapatkan nilai peluang untuk bertemu 3 orang yang tidak menghadiri acara vaksinasi dan akan bertemu keberhasilan pertama dengan peluang 0.2.
 
 **Screenshot**  
@@ -29,6 +30,7 @@ mean((rgeom(data, p) == x))
 # hasil : [1] 0.10014
 ```  
 **Penjelasan**  
+
 fungsi `rgeom` adalah fungsi yang berguna untuk mendapatkan distribusi geometrik dengan variabel acak. Dalam hal ini, variabel acak sejumlah 10000 data dan peluangnya sebesar 0.2.
 
 **Screenshot**  
@@ -37,6 +39,7 @@ fungsi `rgeom` adalah fungsi yang berguna untuk mendapatkan distribusi geometrik
 
 ### Soal 1C  
 **Penjelasan**  
+
 Pada poin a nilainya statis/tetap. sedangkan Pada poin b nilainya dinamis, tetapi mendekati nilai A. Sehingga dapat ditarik kesimpulan bahwa b menggunakan fungsi random, maka tentu hasilnya berbeda beda tetapi nilai poin b selalu mendekati poin a
 
 ### Soal 1D
@@ -67,6 +70,7 @@ variance
 ```  
 
 **Penjelasan**  
+
 rumus `mean = 1/P` dan rumus `varians = Q/P^2`.
 
 **Screenshot**
@@ -84,6 +88,7 @@ dbinom(x, n, p)
 # hasil : [1]  0.2181994
 ```  
 **Penjelasan**  
+
 menggunakan fungsi `dbinom`
 
 **Screenshot**
@@ -120,6 +125,7 @@ variance
 ``` 
 
 **Penjelasan**  
+
 rumus `mean = N*P` dan rumus `varians = N*P*Q`.  
 
 **Screenshot**
@@ -137,6 +143,7 @@ dpois(x, lambda)
 ```  
 
 **Penjelasan** 
+
 memanfaatkan fungsi `dpois`
 
 **Screenshot**
@@ -161,6 +168,7 @@ mean(a)
 
 ### Soal 3C   
 **Penjelasan** 
+
 Pada poin a nilainya statis. Pada poin b nilainya dinamis, tetapi mendekati nilai a.
 
 ### Soal 3D 
@@ -177,6 +185,7 @@ variance
 ```  
 
 **Penjelasan** 
+
 rumus `mean = lambda` dan nilai varian didapatkan dengan cara `varian = mean`
 
 **Screenshot**
@@ -194,6 +203,7 @@ dchisq(x, df = v)
 ```  
 
 **Penjelasan** 
+
 menggunakan fungsi `dchisq`
 
 **Screenshot**
@@ -227,6 +237,7 @@ variance
 ```  
 
 **Penjelasan** 
+
 rumus `mean = V` dan nilai varians didapatkan dengan cara `varians = 2*V`.
 
 **Screenshot**
@@ -234,13 +245,86 @@ rumus `mean = V` dan nilai varians didapatkan dengan cara `varians = 2*V`.
 ![Screenshot 2022-10-10 141656](https://user-images.githubusercontent.com/86828535/194813875-558579a9-9b52-4a5a-ae33-f005f8087d89.png)
 
 
+### Soal 5A  
+**Kode Program**  
+```R
+# 5.A
+lambda <- 3
+dexp(1, rate = lambda)
+# hasil : [1] 0.1493612
+```  
+
+**Penjelasan** 
+
+menggunakn fungsi `dexp`
+
+**Screenshot**
+
+![Screenshot 2022-10-10 142154](https://user-images.githubusercontent.com/86828535/194814532-357df3b2-8032-4c9e-8b1f-02d1ec5dc571.png)
 
 
+### Soal 5B 
+**Kode Program**  
+```R
+# 5.B
+lambda <- 3
+set.seed(1)
+n_10 <- 10
+hist(rexp(n_10, rate = lambda), main = "Histogram Distribusi Exponensial 10 Angka Acak")
+
+set.seed(1)
+n_100 <- 100
+hist(rexp(n_100, rate = lambda), main = "Histogram Distribusi Exponensial 100 Angka Acak")
+
+set.seed(1)
+n_1000 <- 1000
+hist(rexp(n_1000, rate = lambda), main = "Histogram Distribusi Exponensial 1000 Angka Acak")
+
+set.seed(1)
+n_10000 <- 10000
+hist(rexp(n_10000, rate = lambda), main = "Histogram Distribusi Exponensial 10000 Angka Acak")
+```   
+
+**Screenshot**
+
+10
+
+![10](https://user-images.githubusercontent.com/86828535/194814866-f93b3f2f-759b-47c8-86b4-149153bd9eac.png)
+
+100
+
+![100](https://user-images.githubusercontent.com/86828535/194814892-cc3545ac-e0e1-4bcd-8794-9f4c102636d4.png)
+
+1000
+
+![1000](https://user-images.githubusercontent.com/86828535/194814912-71fa0981-7a4b-47ea-8e2d-44d78eebdeb1.png)
+
+10000
+
+![10000](https://user-images.githubusercontent.com/86828535/194814923-23110a03-c8b0-48fa-92f2-6bfc2624f39e.png)
 
 
+### Soal 5C  
+**Kode Program**  
+```R
+lambda <- 3
+n <- 100
+set.seed(1)
+mean <- mean(rexp(n, rate = lambda))
+variance <- (sd(rexp(n, rate = lambda)))^2
+mean
+variance
+# hasil : [1] 0.3435588
+# hasil : [1] 0.06560765
+```  
 
+**Penjelasan** 
 
+menggunakan fungsi bawaan `mean` dan `variance`.
 
+**Screenshot**
+
+![Screenshot 2022-10-10 142705](https://user-images.githubusercontent.com/86828535/194815235-239caee9-0295-4aeb-b3a1-99f94215e0ac.png)
 
 
 
