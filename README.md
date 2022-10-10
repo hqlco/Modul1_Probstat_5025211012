@@ -326,11 +326,67 @@ menggunakan fungsi bawaan `mean` dan `variance`.
 
 ![Screenshot 2022-10-10 142705](https://user-images.githubusercontent.com/86828535/194815235-239caee9-0295-4aeb-b3a1-99f94215e0ac.png)
 
+### Soal 6A  
+**Kode Program**  
+```R
+# 6.A
+n <- 100
+mean <- 50
+sd <- 8
+data <- rnorm(n, mean, sd)
+rata <- mean(data)
+x1 <- floor(rata)
+x2 <- ceiling(rata)
+x1
+x2
+rata
+z <- (data - rata) / sd(data)
+plot(z, main = "Grafik Z-Score")
+```  
 
+**Penjelasan** 
 
+mengunakan fungsi `rnorm` lalu akan di `floor` menjadi x1 dan di `ceiling` menjadi x2.
 
+**Screenshot**
 
+![Screenshot 2022-10-10 151836](https://user-images.githubusercontent.com/86828535/194822849-94b44f22-69a8-4527-b50d-3a7db4098870.png)
 
+### Soal 6B  
+**Kode Program**  
+```R
+# Soal 6B
+n <- 100
+mean <- 50
+sd <- 8
+data <- rnorm(n, mean, sd)
+hist(data, 50, main = "5025211012_Moh Rosy Haqqy Aminy_Probstat_A_DNhistogram ")
+```  
+
+**Screenshot**
+
+![jhfhj](https://user-images.githubusercontent.com/86828535/194823012-2aeb10e5-610b-418e-8b4f-ee425cc057ac.png)
+
+### Soal 6C  
+**Kode Program**  
+```R
+# Soal 6C
+n <- 100
+mean <- 50
+sd <- 8
+data <- rnorm(n, mean, sd)
+sdd <- sd(data)
+variance <- sdd * sdd
+variance
+```  
+
+**Penjelasan** 
+
+nilai varians pada distribusi normal dapat diketahui dengan kuadrat dari standar deviasi  
+
+**Screenshot**
+
+![Screenshot 2022-10-10 152138](https://user-images.githubusercontent.com/86828535/194823282-3bffa325-2e26-4a97-81ea-953e636ddcc5.png)
 
 -------
 <p align="center"> 
