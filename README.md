@@ -1,1 +1,4 @@
-# Modul1_Probstat_5025211012
+### Praktikum 1 [ Probabilitas & Statistika ]
+| Nama                      | NRP           |
+|---------------------------|---------------|
+|Moh rosy haqqy aminy       |5025211012     |
