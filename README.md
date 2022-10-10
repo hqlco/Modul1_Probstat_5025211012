@@ -123,18 +123,115 @@ variance
 rumus `mean = N*P` dan rumus `varians = N*P*Q`.  
 
 **Screenshot**
+
 ![Screenshot 2022-10-10 135843](https://user-images.githubusercontent.com/86828535/194811284-70a8c500-9e2c-4352-998d-ade798eec9ce.png)
 
+### Soal 3A  
+**Kode Program**  
+```R
+# 3.A
+lambda <- 4.5
+x <- 6
+dpois(x, lambda)
+# hasil : [1] 0.1281201
+```  
 
+**Penjelasan** 
+memanfaatkan fungsi `dpois`
 
+**Screenshot**
 
+![Screenshot 2022-10-10 140136](https://user-images.githubusercontent.com/86828535/194811666-d96ceff8-bf49-4ced-bd8e-e4a1a10492a7.png)
 
+### Soal 3B  
+**Kode Program**  
+```R
+# 3.B
+lambda <- 4.5
+n <- 365
+hist(rpois(n, lambda), main = "Grafik histogram distribusi poisson kelahiran 6 bayi selama 1 tahun")
+a <- (rpois(n, lambda) == 6)
+mean(a)
+# hasil : [1] 0.1260274
+```  
 
+**Screenshot**
 
+![sjddsjbd](https://user-images.githubusercontent.com/86828535/194811909-aebe2edb-06d9-487d-82a3-972a027cf964.png)
 
+### Soal 3C   
+**Penjelasan** 
+Pada poin a nilainya statis. Pada poin b nilainya dinamis, tetapi mendekati nilai a.
 
+### Soal 3D 
+**Kode Program**  
+```R
+# 3.D
+lambda <- 4.5
+mean <- lambda
+variance <- mean
+mean
+variance
+# hasil : [1] 4.5
+# hasil : [1] 4.5
+```  
 
+**Penjelasan** 
+rumus `mean = lambda` dan nilai varian didapatkan dengan cara `varian = mean`
 
+**Screenshot**
+
+![Screenshot 2022-10-10 141041](https://user-images.githubusercontent.com/86828535/194813116-35a7207b-f3f5-492f-a393-ff7340526f5b.png)
+
+### Soal 4A  
+**Kode Program**  
+```R
+# 4.A
+x <- 2
+v <- 10
+dchisq(x, df = v)
+# hasil : [1] 0.007664155
+```  
+
+**Penjelasan** 
+menggunakan fungsi `dchisq`
+
+**Screenshot**
+
+![Screenshot 2022-10-10 141412](https://user-images.githubusercontent.com/86828535/194813545-86b19dc6-88ab-4aa0-b913-72d414ebccea.png)
+
+### Soal 4B  
+**Kode Program**  
+```R
+# 4.B
+n <- 100
+v <- 10
+hist(rchisq(n, df = v), main = "Grafik Histogram Distribusi Chi-Square pada 100 Random Data")
+```  
+
+**Screenshot**
+
+![kjfqkwh](https://user-images.githubusercontent.com/86828535/194813661-8bfbcfa1-4901-4168-a9b5-d28657e2aba2.png)
+
+### Soal 4C  
+**Kode Program**  
+```R
+# 4.C
+v <- 10
+mean <- v
+variance <- v * 2
+mean
+variance
+# hasil : [1] 10
+# hasil : [1] 20
+```  
+
+**Penjelasan** 
+rumus `mean = V` dan nilai varians didapatkan dengan cara `varians = 2*V`.
+
+**Screenshot**
+
+![Screenshot 2022-10-10 141656](https://user-images.githubusercontent.com/86828535/194813875-558579a9-9b52-4a5a-ae33-f005f8087d89.png)
 
 
 
